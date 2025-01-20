@@ -3,7 +3,9 @@ from typing import List
 def get_requirements()-> List[str]:
     """
     Function for returning list of requirements"""
-    requirement_list=list()
+    
+    requirement_list:List[str]=[]
+    
     try:
         with open('requirements.txt','r') as file:
             lines=file.readlines()
@@ -19,7 +21,7 @@ setup(
     name="Network Security",
     version="0.0.1",
     packages=find_packages(),
-    install_required=get_requirements()
+    install_requires=get_requirements()
 
 )                  
 
